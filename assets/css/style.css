@@ -1,7 +1,51 @@
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Nunito Sans", Verdana, sans-serif;
     font-size: 1.1rem;
     margin: 0;
     padding: 0;
 }
+
+/* Variables */
+:root {
+
+/**Colour Scheme **/
+--bs-navbar-brand-color: #d6a553 !important;
+
+
+/**Text Size **/
+
+
+}
+
+
+/* Font Family */
+.RougeScript {
+    font-family: "Rouge Script", Verdana, sans-serif;
+}
+
+.Handjet {
+    font-family: "Handjet", Verdana, sans-serif; ;
+}
+
+.mobile-menu {
+        display: block;
+    }
+
+.card {
+    width: 31%;
+    margin: auto;
+    height: 700px;
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+
+    .card {
+    width: 86%;}
+}
+   
+
 
