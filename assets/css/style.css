@@ -9,21 +9,34 @@
 :root {
 
 /**Colour Scheme **/
---bs-navbar-brand-color: #d6a553 !important;
+
 
 
 /**Text Size **/
 --tsm: 0.75rem;
 --tmd: 1rem;
+--tl: 1.2rem;
+--txl: 1.8rem;
+--txxxl: 3rem;
 
 /** Sizes **/
 
 }
 
+.title {
+font-size: var(--txxxl)
+}
 .small {
 font-size: var(--tsm);
 }
 
+.large {
+    font-size: var(--txl);
+}
+
+.navbar-brand {
+  color: #d6a553 !important;
+}
 
 
 /* Font Family */
@@ -39,15 +52,22 @@ font-size: var(--tsm);
         display: block;
     }
 
+/** Projects cards **/    
 .card {
     width: 31%;
     margin: auto;
     height: 700px;
 }
 
+.card-header{
+    font-size:var(--tl)
+}
+
+/** Social Media Icons **/
 .socials {
     width:8%;
 }
+
 
 
 /* Media Queries */
@@ -56,6 +76,8 @@ font-size: var(--tsm);
     .card {
     width: 86%;}
 }
+
+
    
 
 
