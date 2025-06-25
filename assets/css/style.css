@@ -9,7 +9,7 @@
 :root {
 
 /**Colour Scheme **/
-
+--primary-color: black;
 
 
 /**Text Size **/
@@ -22,6 +22,10 @@
 /** Sizes **/
 
 }
+
+/* Color */
+.bg-dark {
+    background-color: var(--primary-color) !important;}
 
 .title {
 font-size: var(--txxxl)
@@ -37,6 +41,8 @@ font-size: var(--tsm);
 .navbar-brand {
   color: #d6a553 !important;
 }
+
+
 
 
 /* Font Family */
