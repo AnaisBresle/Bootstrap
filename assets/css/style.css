@@ -13,9 +13,17 @@
 
 
 /**Text Size **/
+--tsm: 0.75rem;
+--tmd: 1rem;
 
+/** Sizes **/
 
 }
+
+.small {
+font-size: var(--tsm);
+}
+
 
 
 /* Font Family */
@@ -37,7 +45,9 @@
     height: 700px;
 }
 
-
+.socials {
+    width:8%;
+}
 
 
 /* Media Queries */

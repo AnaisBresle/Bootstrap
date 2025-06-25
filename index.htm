@@ -121,11 +121,12 @@
             <!--Contact Section-->
             <section id="Contact" class="my-4 px-4">
                 <div class="container-fluid row">
-                    <div class="col-3">
+                    <div class="col-5">
                         <h1>Let's Build Something Together</h1>
                         <p>Ready to turn your idea into something real? Drop me a message.</p>
                     </div>
-                    <div class="col-9">
+                    <div class="col-2"></div>
+                    <div class="col-5">
                         
                     <form action="submit.php" method="post">
 
@@ -133,19 +134,19 @@
                     <input type="text" name="name" id="name" class="form-control form-control-sm">
                     <br />
                     <Label for="company" class="block-label">Company</Label><br />
-                    <input type="text" id="company" name="company">
+                    <input type="text" id="company" name="company" class="form-control form-control-sm">
                     <br />
                     <label for="email" class="block-label">Email</label><br />
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" class="form-control form-control-sm">
                     <br />
                     <label for="tel" class="block-label">Tel</label><br />
-                    <input type="tel" name="tel" id="tel">
+                    <input type="tel" name="tel" id="tel" class="form-control form-control-sm">
                     <br />
 
 
                     <p>How can I help?</p>
 
-                    <input type="radio" id="webdesign" name="services" value="Website design/redesign">
+                    <input type="radio" id="webdesign" name="services" value="Website design/redesign" >
                     <label for="web design">Website Design</label><br />
                     <input type="radio" id="website build" name="services" value="Website build">
                     <label for="website build">Website Build</label><br />
@@ -156,7 +157,7 @@
                     <input type="datetime-local">
                     <br />
                     <p>Provide a short description of your project.</p>
-                    <textarea id="description" name="description"></textarea>
+                    <textarea id="description" name="description" class="form-control form-control-sm"></textarea>
 
                     <br />
                     <input type="button" value="Request a chat">
@@ -168,13 +169,15 @@
 
 
     </main>
-    <footer class="d-inline-flex mt-4 row">
-        <div class="col-6 ">
+    <footer class="mt-4 bg-dark p-2 text-white">
+        <div class="row align-items-center">
+        <div class="col-6 align-middle">
             <p class="small">©2025 Ana&#239;s B. All rights reserved.</p>
         </div>
-        <div class="col-6 text-end">Follow me on <a href="https://www.linkedin.com/in/anais-bresle-b2bmarketing/"
+        <div class="col-6 text-end pr-4 small">Follow me on <a href="https://www.linkedin.com/in/anais-bresle-b2bmarketing/"
                 target="_blank"><img src="./assets/images/LinkedIn.png" class="socials"></a> </div>
-    </footer>
+    </div>
+</footer>
 
 </body>
 
