@@ -20,7 +20,7 @@
 --txxxl: 3rem;
 
 /** Sizes **/
-
+--xsm: 0.15rem;
 }
 
 /* Color */
@@ -43,7 +43,13 @@ font-size: var(--tsm);
 }
 
 
-
+nav ul li a:hover {
+    border-radius: 0.25rem;
+    background: rgba(241, 254, 254, 0.4);
+    backdrop-filter: blur(8px);
+    padding: var(--xsm);
+}
+   
 
 /* Font Family */
 .RougeScript {
