@@ -8,9 +8,17 @@
     <meta description="A quick overview of the recent work that I did over the last 6 months." />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rouge+Script&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rouge+Script&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+ 
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
 </head>
 
 <body>
@@ -127,9 +135,10 @@
                         <h1>Let's Build Something Together</h1>
                         <p>Ready to turn your idea into something real? Drop me a message.</p>
                     </div>
-                    <div class="col-2"></div>
-                    <div class="col-5">
-                        
+                    
+                    <div class="col-7">
+                     
+                    <div class="col-9 mx-auto">    
                     <form action="submit.php" method="post">
 
                     <label for="name" class="block-label">Fullname</label><br />
@@ -146,25 +155,28 @@
                     <br />
 
 
-                    <p>How can I help?</p>
+                    <p><b>How can I help?</b></p>
 
-                    <input type="radio" id="webdesign" name="services" value="Website design/redesign" >
+                    <input type="radio" id="webdesign" name="services" value="Website design/redesign" class="form-check-input" >
                     <label for="web design">Website Design</label><br />
-                    <input type="radio" id="website build" name="services" value="Website build">
+                    <input type="radio" id="website build" name="services" value="Website build" class="form-check-input" >
                     <label for="website build">Website Build</label><br />
-                    <input type="radio" id="marketing strategy" name="services" value="Marketing strategy">
+                    <input type="radio" id="marketing strategy" name="services" value="Marketing strategy" class="form-check-input" >
                     <label for="marketing strategy">Marketing Strategy</label><br />
-
-                    <p>Project Deadline</p>
-                    <input type="datetime-local">
+<br />
+                    <p><b>Project Deadline</b></p>
+                    <input type="text" id="datepicker" placeholder="Pick a date">
+                                        <br />
                     <br />
-                    <p>Provide a short description of your project.</p>
+                    <p><b>Provide a short description of your project.</b></p>
                     <textarea id="description" name="description" class="form-control form-control-sm"></textarea>
 
                     <br />
-                    <input type="button" value="Request a chat">
+                     <button type="submit" class="btn btn-primary">Request a chat</button>
+                    
 
                 </form></div>
+</div>
 
                 </div>
             </section>
