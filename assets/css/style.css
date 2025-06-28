@@ -60,6 +60,14 @@ font-family:"Handjet", Verdana, sans-serif;
 font-weight:600;
 }
 
+
+.btn-primary:hover {
+background-color:white ;
+color: var(--secondary-color);
+border-color: var(--secondary-color);
+border: 1px solid;
+}
+
 /* Font Family */
 .RougeScript {
     font-family: "Rouge Script", Verdana, sans-serif;
