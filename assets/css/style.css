@@ -51,6 +51,9 @@ nav ul li a:hover {
     padding: var(--xsm);
 }
 
+.mobile-menu {
+        display: none;
+    }
    
 
 .btn-primary {
@@ -155,6 +158,8 @@ content: "📞 ";
   color: var(--secondary-color) !important;
   white-space: normal;
   word-break: break-word;
+  overflow-wrap: anywhere;     /* break only if needed */
+  
 }
 
     .card {
@@ -196,6 +201,8 @@ display: none;
 .mobile-menu {
         display: block;
     }
+
+
 }
 
 
