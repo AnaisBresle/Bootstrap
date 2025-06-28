@@ -10,6 +10,7 @@
 
 /**Colour Scheme **/
 --primary-color: black;
+--secondary-color:#d6a553;
 
 
 /**Text Size **/
@@ -39,7 +40,7 @@ font-size: var(--tsm);
 }
 
 .navbar-brand {
-  color: #d6a553 !important;
+  color: var(--secondary-color) !important;
 }
 
 
@@ -64,6 +65,11 @@ nav ul li a:hover {
         display: block;
     }
 
+/**About section **/
+.coverimg {
+border-radius: 20%; 
+}   
+
 /** Projects cards **/    
 .card {
     width: 31%;
@@ -75,6 +81,14 @@ nav ul li a:hover {
     font-size:var(--tl)
 }
 
+/**Form style **/
+form {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    border-radius:0.5rem;
+    color: white;
+}
+
 /** Social Media Icons **/
 .socials {
     width:8%;
@@ -82,11 +96,23 @@ nav ul li a:hover {
 
 
 
+
 /* Media Queries */
 @media (max-width: 1024px) {
 
     .card {
-    width: 86%;}
+    width: 86%;
+}
+    
+    #Projects {
+        background-color: var(--primary-color);
+        color:var(--secondary-color);
+    }
+
+    form { 
+        background-color: rgba(0, 0, 0, 0.2);
+        color:black;
+    }
 }
 
 
