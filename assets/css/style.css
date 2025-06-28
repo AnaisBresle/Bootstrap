@@ -77,9 +77,6 @@ border: 1px solid;
     font-family: "Handjet", Verdana, sans-serif; ;
 }
 
-.mobile-menu {
-        display: block;
-    }
 
 /**About section **/
 .coverimg {
@@ -183,6 +180,15 @@ content: "📞 ";
     .coverimg {
 display: none; 
 }  
+
+/** Hiding inline menu **/
+.menu-desktop{
+    display: none;
+}
+/** Bringing mobile menu **/
+.mobile-menu {
+        display: block;
+    }
 }
 
 
