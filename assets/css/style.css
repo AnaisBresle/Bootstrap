@@ -10,7 +10,7 @@
 
 /**Colour Scheme **/
 --primary-color: black;
---secondary-color:rgb(214, 165, 83);
+--secondary-color:#d6a553;
 
 
 /**Text Size **/
@@ -109,7 +109,37 @@ form {
     width:8%;
 }
 
+/* Pseudo-elements for Email and Phone Labels */
+/* Add ✉️ and 📞 icons before the labels */
 
+.email-label::before {
+content: "✉️ ";
+
+}
+
+.tel-label::before {
+content: "📞 ";
+
+}
+
+/*overwritting datepicker style */
+.ui-datepicker {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem;
+}
+
+/* Highlight today */
+.ui-datepicker-today a {
+  background-color: var(--secondary-color) !important;
+  color: #fff !important;
+}
+
+/* Hover effect */
+.ui-datepicker td a:hover {
+  background-color: #f1e2c7;
+  color: #000;
+}
 
 
 /* Media Queries */
