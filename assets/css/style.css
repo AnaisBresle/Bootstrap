@@ -152,13 +152,15 @@ content: "📞 ";
     #Projects {
         background-color: var(--primary-color);
         color:var(--secondary-color);
+     padding: 2.5rem 0;
+
     }
 
     .card {
     border-color: var(--secondary-color);
     background-color: var(--primary-color);
     color:white;
-}
+ }
 
 /** Changin the background of the image on mobile */
 .card-img-top {
@@ -169,6 +171,10 @@ content: "📞 ";
         background-color: rgba(0, 0, 0, 0.2);
         color:black;
     }
+/** Hidding image on mobile as otherwise too small */
+    .coverimg {
+display: none; 
+}  
 }
 
 
