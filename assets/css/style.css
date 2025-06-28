@@ -41,7 +41,7 @@ font-size: var(--tsm);
 
 .navbar-brand {
   color: var(--secondary-color) !important;
-}
+  }
 
 
 nav ul li a:hover {
@@ -50,6 +50,7 @@ nav ul li a:hover {
     backdrop-filter: blur(8px);
     padding: var(--xsm);
 }
+
    
 
 .btn-primary {
@@ -149,6 +150,12 @@ content: "📞 ";
 
 /* Media Queries */
 @media (max-width: 1024px) {
+
+.navbar-brand {
+  color: var(--secondary-color) !important;
+  white-space: normal;
+  word-break: break-word;
+}
 
     .card {
     width: 86%;
