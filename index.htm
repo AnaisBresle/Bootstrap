@@ -28,7 +28,7 @@ $( function() {
    
     $( ".rolling" ).on( "click", function() {
         const card = $(this).closest(".card"); // Select the card of the clicked button
-        let state = card.data("expanded") || false; // check if card state = expanded - if not set to false
+        let isExpanded = card.data("expanded") || false; // check if card state = expanded - if not set to false
       
         if ( !isExpanded ) {//If state not true (not expanded) apply this style on click {
         card.animate({
