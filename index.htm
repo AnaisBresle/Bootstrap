@@ -23,25 +23,28 @@
   $( function() {
     $( "#resizable" ).resizable();
   } );
-
-
-    $( function() {
-    // run the scale effect
-    function runEffect(card) {
-         
-const options = { percent: 80 };/*grow to 80% */
-card. effect("scale", options, 500);
-    };
- 
-   
-// Actually run the function
-      $(".scaling").on("click", function() {
-        const card = $(this).closest(".card")
-    runEffect(card);
-    return false;
-  });
- 
+  
+$( function() {
+    var state = true;
+    $( ".rolling" ).on( "click", function() {
+      if ( state ) {
+        $( ".card" ).animate({
+          backgroundColor: "#aa0000",
+          color: "#fff",
+          width: 500,
+        }, 1000 );
+      } else {
+        $( ".card" ).animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240,
+        }, 1000 );
+      }
+      state = !state;
+    });
   } );
+
+   
   
  
   </script>
@@ -132,7 +135,7 @@ card. effect("scale", options, 500);
                                 guide a volunteer through implementation in WordPress. Focused on clarity, usability,
                                 and local engagement.</p>
                             <p class="card-text small">Figma</p>
-                            <button class="scaling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
+                            <button class="rolling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
                             
                         </div>
                     </div>
@@ -149,7 +152,7 @@ card. effect("scale", options, 500);
                                 with their services despite platform limitations.</p>
                             <p class="card-text small">Fabrik.io</p>
 
-                            <button class="scaling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
+                            <button class="rolling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
                         </div>
                     </div></div>
 <div class="col d-flex">
@@ -162,7 +165,7 @@ card. effect("scale", options, 500);
                             <p class="card-text">Designed and built a one-page marketing site in Webflow to establish a
                                 professional online presence for Firefinch Marketing. </p>
                             <p class="card-text small">Webflow</p>
-                            <button class="scaling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
+                            <button class="rolling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
                         </div></div>
 </div>
                     </div>
