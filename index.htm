@@ -36,7 +36,7 @@ card. effect("scale", options, 500);
    
 // Actually run the function
       $(".scaling").on("click", function() {
-        const card =$(this).closeset(".card")
+        const card = $(this).closest(".card")
     runEffect(card);
     return false;
   });
