@@ -29,13 +29,14 @@
     // run the scale effect
     function runEffect(card) {
          
-var options = { percent: 80 };/*grow to 80% */
+const options = { percent: 80 };/*grow to 80% */
 card. effect("scale", options, 500);
     };
  
    
 // Actually run the function
       $(".scaling").on("click", function() {
+        const card =$(this).closeset(".card")
     runEffect(card);
     return false;
   });
@@ -122,7 +123,7 @@ card. effect("scale", options, 500);
                 <div class="container-fluid ">
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 mx-auto">
                         <div class="col d-flex">
-                    <div id="zoomin" class="card px-0 mx-auto h-100 w-100">
+                    <div class="card px-0 mx-auto h-100 w-100">
                         <div class="card-header">WF basketball - Visual mockups</div>
                         <img src="./assets/images/Flames.png" class="card-img-top">
                         <div class="card-body d-flex flex-column">
