@@ -24,14 +24,41 @@
     $( "#resizable" ).resizable();
   } );
 
-  $( function() {
-    $( ".expand" ).on( "click", function() {
-      $( ".expandcard" ).switchClass( "expandcard", 1000 );
-      
+
+    $( function() {
+    // run the currently selected effect
+    function runEffect() {
+      // get effect type from
+      var selectedEffect = $( "#effectTypes" ).val();
+ 
+      // Most effect types need no options passed by default
+      var options = {};
+      // some effects have required parameters
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 50 };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 200, height: 60 } };
+      }
+ 
+      // Run the effect
+      $( "#effect" ).effect( selectedEffect, options, 500, callback );
+    };
+ 
+    // Callback function to bring a hidden box back
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+    };
+ 
+    // Set effect from select menu value
+    $( "#button" ).on( "click", function() {
+      runEffect();
+      return false;
     });
   } );
+  
  
-
   </script>
 </head>
 
@@ -120,7 +147,7 @@
                                 guide a volunteer through implementation in WordPress. Focused on clarity, usability,
                                 and local engagement.</p>
                             <p class="card-text small">Figma</p>
-                            <a href="#" class="expand btn btn-primary mt-auto w-50 mx-auto">Expand</a>
+                            <a href="#" class="btn btn-primary mt-auto w-50 mx-auto">Expand</a>
                         </div>
                     </div>
                     </div>
@@ -136,7 +163,7 @@
                                 with their services despite platform limitations.</p>
                             <p class="card-text small">Fabrik.io</p>
 
-                            <a href="#" class="expand btn btn-primary mt-auto w-50 mx-auto">Expand</a>
+                            <a href="#" class="btn btn-primary mt-auto w-50 mx-auto">Expand</a>
                         </div>
                     </div></div>
 <div class="col d-flex">
@@ -149,7 +176,7 @@
                             <p class="card-text">Designed and built a one-page marketing site in Webflow to establish a
                                 professional online presence for Firefinch Marketing. </p>
                             <p class="card-text small">Webflow</p>
-                            <a href="#" class="expand btn btn-primary mt-auto w-50 mx-auto">Expand</a>
+                            <a href="#" class="btn btn-primary mt-auto w-50 mx-auto">Expand</a>
                         </div></div>
 </div>
                     </div>
