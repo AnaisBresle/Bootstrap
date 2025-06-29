@@ -18,6 +18,20 @@
   $( function() {
     $( "#datepicker" ).datepicker();
   } );
+
+ //Resizable function for text area
+  $( function() {
+    $( "#resizable" ).resizable();
+  } );
+
+  $( function() {
+    $( ".expand" ).on( "click", function() {
+      $( ".newcardsize" ).switchClass( "newcardsize", "anotherNewClass", 1000 );
+      $( ".anotherNewClass" ).switchClass( "anotherNewClass", "newClass", 1000 );
+    });
+  } );
+ 
+
   </script>
 </head>
 
@@ -106,7 +120,7 @@
                                 guide a volunteer through implementation in WordPress. Focused on clarity, usability,
                                 and local engagement.</p>
                             <p class="card-text small">Figma</p>
-                            <a href="#" class="btn btn-primary mt-auto w-50 mx-auto">Expand</a>
+                            <a href="#" class="expand btn btn-primary mt-auto w-50 mx-auto">Expand</a>
                         </div>
                     </div>
                     </div>
@@ -122,7 +136,7 @@
                                 with their services despite platform limitations.</p>
                             <p class="card-text small">Fabrik.io</p>
 
-                            <a href="#" class="btn btn-primary mt-auto w-50 mx-auto">Expand</a>
+                            <a href="#" class="expand btn btn-primary mt-auto w-50 mx-auto">Expand</a>
                         </div>
                     </div></div>
 <div class="col d-flex">
@@ -135,7 +149,7 @@
                             <p class="card-text">Designed and built a one-page marketing site in Webflow to establish a
                                 professional online presence for Firefinch Marketing. </p>
                             <p class="card-text small">Webflow</p>
-                            <a href="#" class="btn btn-primary mt-auto w-50 mx-auto">Expand</a>
+                            <a href="#" class="expand btn btn-primary mt-auto w-50 mx-auto">Expand</a>
                         </div></div>
 </div>
                     </div>
@@ -191,8 +205,9 @@
                     <input type="text" id="datepicker" placeholder="Pick a date" class="p-2">
                                         <br />
                     <br />
+                    <!--Resizable function for text area -->
                     <p><b>Provide a short description of your project.</b></p>
-                    <textarea id="description" name="description" class="form-control form-control-sm"></textarea>
+                    <textarea id="resizable" name="description" class="form-control form-control-sm"></textarea>
 
                     <br />
                      <button type="submit" class="btn btn-primary">Request a chat</button>
