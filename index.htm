@@ -27,27 +27,33 @@
 $( function() {
    
     $( ".rolling" ).on( "click", function() {
-        const card = $(this).closest(".card") // Select the card of the clicked button
-        let state = card.data("expanded") // set state as expanded
+        const card = $(this).closest(".card"); // Select the card of the clicked button
+        let state = card.data("expanded") || false; // check if card state = expanded - if not set to false
       
-        if ( !state ) {
+        if ( !isExpanded ) //If state not true (not expanded) apply this style on click {
         card.animate({
           backgroundColor: " rgba(0, 0, 0, 0.8)",
           color: "#fff",
           width: 100, // width we want to expand to
-        }, 1000 ); //timing 1 sec
+        }, 1000 ); //animatio  duration 1 sec
+
+        card.data("expanded", true);// Store card state
       } else {
+        //if card is Expanded, animate back to original
         card.animate({
           backgroundColor: "#fff",
           color: "#000",
           width: 240, // orginal width
         }, 1000 );
+
+        //reset and store new card state
+        card.data("expanded", false);
       }
-      card.data("expanded", !state);// Store card state
+        });
+    };
 
       
-    });
-  } );
+
 
    
   
