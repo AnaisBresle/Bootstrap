@@ -25,7 +25,7 @@
   } );
 
 $( function() {
-    var state = true;
+   
     $( ".rolling" ).on( "click", function() {
         const card = $(this).closest(".card") // Select the card of the clicked button
       
@@ -34,17 +34,24 @@ $( function() {
         card.animate({
           backgroundColor: " rgba(0, 0, 0, 0.8)",
           color: "#fff",
-          width: 100,
+          width: 100, // width we want to expand to
         }, 1000 );
       } else {
         card.animate({
           backgroundColor: "#fff",
           color: "#000",
-          width: 240,
+          width: 240, // orginal width
         }, 1000 );
       }
       state = !state;
-
+$(".rolling").on("click", function() {
+  if (state) {
+    // animate to expanded state
+  } else {
+    // animate back to original state
+  }
+  state = !state;
+});
       
     });
   } );
