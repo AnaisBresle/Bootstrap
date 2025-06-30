@@ -39,7 +39,7 @@ font-size: var(--tsm);
     font-size: var(--txl);
 }
 
-.navbar-brand {
+.tagline {
   color: var(--secondary-color) !important;
   }
 
