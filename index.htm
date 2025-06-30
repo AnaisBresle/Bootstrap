@@ -40,6 +40,16 @@ $( function() {
         card.data("expanded", true);// Store card state
    
         // Auto-collapse after 3 seconds
+setTimeout(() => {
+        card.animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240,
+        }, 1000);
+        card.data("expanded", false);
+      }, 3000);
+
+
       } else {
         //if card is Expanded, animate back to original
         card.animate({
