@@ -188,10 +188,15 @@ content: "📞 ";
         background-color: rgba(0, 0, 0, 0.2);
         color:black;
     }
-/** Hidding image on mobile as otherwise too small */
+/** Hidding image and buttons on mobile as otherwise too small */
     .coverimg {
 display: none; 
 }  
+
+button.rolling {
+    display: none; 
+
+}
 
 /** Hiding inline menu **/
 .menu-desktop{
