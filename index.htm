@@ -38,6 +38,8 @@ $( function() {
         }, 1000 ); //animatio  duration 1 sec
 
         card.data("expanded", true);// Store card state
+   
+        // Auto-collapse after 3 seconds
       } else {
         //if card is Expanded, animate back to original
         card.animate({
@@ -205,16 +207,16 @@ $( function() {
                     <form action="submit.php" method="post">
 
                     <label for="name" class="block-label">Fullname</label><br />
-                    <input type="text" name="name" id="name" class="form-control form-control-sm">
+                    <input type="text" name="name" id="name" class="form-control form-control-sm" autocomplete="name">
                     <br />
                     <Label for="company" class="block-label">Company</Label><br />
-                    <input type="text" id="company" name="company" class="form-control form-control-sm">
+                    <input type="text" id="company" name="company" class="form-control form-control-sm" autocomplete="organization">
                     <br />
                     <label for="email" class="block-label email-label">Email</label><br />
-                    <input type="email" name="email" id="email" class="form-control form-control-sm">
+                    <input type="email" name="email" id="email" class="form-control form-control-sm" autocomplete="on">
                     <br />
                     <label for="tel" class="block-label tel-label">Tel</label><br />
-                    <input type="tel" name="tel" id="tel" class="form-control form-control-sm">
+                    <input type="tel" name="tel" id="tel" class="form-control form-control-sm" autocomplete="tel">
                     <br />
 
 
@@ -234,7 +236,7 @@ $( function() {
                     <br />
                     <!--Resizable function for text area -->
                     <p><b>Provide a short description of your project.</b></p>
-                    <textarea id="resizable" name="description" class="form-control form-control-sm"></textarea>
+                    <textarea id="resizable" name="description" class="form-control form-control-sm" autocomplete="off"></textarea>
 
                     <br />
                      <button type="submit" class="btn btn-primary">Request a chat</button>
