@@ -8,31 +8,33 @@
 /* Variables */
 :root {
 
-/**Colour Scheme **/
---primary-color: black;
---secondary-color:#d6a553;
+    /**Colour Scheme **/
+    --primary-color: black;
+    --secondary-color: #d6a553;
 
 
-/**Text Size **/
---tsm: 0.75rem;
---tmd: 1rem;
---tl: 1.2rem;
---txl: 1.8rem;
---txxxl: 3rem;
+    /**Text Size **/
+    --tsm: 0.75rem;
+    --tmd: 1rem;
+    --tl: 1.2rem;
+    --txl: 1.8rem;
+    --txxxl: 3rem;
 
-/** Sizes **/
---xsm: 0.15rem;
+    /** Sizes **/
+    --xsm: 0.15rem;
 }
 
 /* Color */
 .bg-dark {
-    background-color: var(--primary-color) !important;}
+    background-color: var(--primary-color) !important;
+}
 
 .title {
-font-size: var(--txxxl)
+    font-size: var(--txxxl)
 }
+
 .small {
-font-size: var(--tsm);
+    font-size: var(--tsm);
 }
 
 .large {
@@ -40,8 +42,8 @@ font-size: var(--tsm);
 }
 
 .tagline {
-  color: var(--secondary-color) !important;
-  }
+    color: var(--secondary-color) !important;
+}
 
 
 nav ul li a:hover {
@@ -52,24 +54,24 @@ nav ul li a:hover {
 }
 
 .mobile-menu {
-        display: none;
-    }
-   
+    display: none;
+}
+
 
 .btn-primary {
-background-color: var(--secondary-color);
-border:0;
-color: var(--primary-color);
-font-family:"Handjet", Verdana, sans-serif;
-font-weight:600;
+    background-color: var(--secondary-color);
+    border: 0;
+    color: var(--primary-color);
+    font-family: "Handjet", Verdana, sans-serif;
+    font-weight: 600;
 }
 
 
 .btn-primary:hover {
-background-color:white ;
-color: var(--secondary-color);
-border-color: var(--secondary-color);
-border: 1px solid;
+    background-color: white;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border: 1px solid;
 }
 
 /* Font Family */
@@ -78,29 +80,30 @@ border: 1px solid;
 }
 
 .Handjet {
-    font-family: "Handjet", Verdana, sans-serif; ;
+    font-family: "Handjet", Verdana, sans-serif;
+    ;
 }
 
 
 /**About section **/
 .coverimg {
-border-radius: 20%; 
-}   
+    border-radius: 20%;
+}
 
-/** Projects cards **/    
+/** Projects cards **/
 .card {
     width: 31%;
     height: 700px;
     border-color: var(--primary-color);
-    
+
 }
 
-.card-header{
-    font-size:var(--tl);
+.card-header {
+    font-size: var(--tl);
     font-weight: 800;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-   
+
 }
 
 
@@ -109,108 +112,106 @@ border-radius: 20%;
 form {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 25px;
-    border-radius:0.5rem;
+    border-radius: 0.5rem;
     color: white;
 }
 
 /** Social Media Icons **/
 .socials {
-    width:8%;
+    width: 8%;
 }
 
 /* Pseudo-elements for Email and Phone Labels */
 /* Add ✉️ and 📞 icons before the labels */
 
 .email-label::before {
-content: "✉️ ";
+    content: "✉️ ";
 
 }
 
 .tel-label::before {
-content: "📞 ";
+    content: "📞 ";
 
 }
 
 /*overwritting datepicker style */
 .ui-datepicker {
-  background: #f8f9fa;
-  border: 1px solid #dee2e6;
-  padding: 0.5rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
 }
 
 /* Highlight today */
 .ui-datepicker-today a {
-  background-color: var(--secondary-color) !important;
-  color: #fff !important;
+    background-color: var(--secondary-color) !important;
+    color: #fff !important;
 }
 
 /* Hover effect */
 .ui-datepicker td a:hover {
-  background-color: #f1e2c7;
-  color: #000;
+    background-color: #f1e2c7;
+    color: #000;
 }
 
 
 /* Media Queries */
 @media (max-width: 1024px) {
 
-.navbar-brand {
-  color: var(--secondary-color) !important;
-  white-space: normal;
-  word-break: break-word;
-  overflow-wrap: anywhere;     /* break only if needed */
-  
-}
+    .navbar-brand {
+        color: var(--secondary-color) !important;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        /* break only if needed */
+
+    }
 
     .card {
-    width: 86%;
-}
-    
+        width: 86%;
+    }
+
     #Projects {
         background-color: var(--primary-color);
-        color:var(--secondary-color);
-     padding: 2.5rem 0;
+        color: var(--secondary-color);
+        padding: 2.5rem 0;
 
     }
 
     .card {
-    border-color: var(--secondary-color);
-    background-color: var(--primary-color);
-    color:white;
- }
-
-/** Changin the background of the image on mobile */
-.card-img-top {
-    background-color: var(--primary-color);
-}
-
-    form { 
-        background-color: rgba(0, 0, 0, 0.2);
-        color:black;
+        border-color: var(--secondary-color);
+        background-color: var(--primary-color);
+        color: white;
     }
-/** Hidding image and buttons on mobile as otherwise too small */
+
+    /** Changin the background of the image on mobile */
+    .card-img-top {
+        background-color: var(--primary-color);
+    }
+
+    form {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: black;
+    }
+
+    /** Hidding image and buttons on mobile as otherwise too small */
     .coverimg {
-display: none; 
-}  
+        display: none;
+    }
 
-button.rolling {
-    display: none; 
+    button.rolling {
+        display: none;
 
-}
+    }
 
-/** Hiding inline menu **/
-.menu-desktop{
-    display: none;
-}
-/** Bringing mobile menu **/
-.mobile-menu {
+    /** Hiding inline menu **/
+    .menu-desktop {
+        display: none;
+    }
+
+    /** Bringing mobile menu **/
+    .mobile-menu {
         display: block;
     }
 
 
 }
-
-
-   
-
-

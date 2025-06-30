@@ -8,69 +8,70 @@
     <meta description="A quick overview of the recent work that I did over the last 6 months." />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rouge+Script&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rouge+Script&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
-    
-  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
 
- //Resizable function for text area
-  $( function() {
-    $( "#resizable" ).resizable();
-  } );
-
-$( function() {
-   
-    $( ".rolling" ).on( "click", function() {
-        const card = $(this).closest(".card"); // Select the card of the clicked button
-        let isExpanded = card.data("expanded") || false; // check if card state = expanded - if not set to false
-      
-        if ( !isExpanded ) {//If state not true (not expanded) apply this style on click {
-        card.animate({
-          backgroundColor: " rgba(0, 0, 0, 0.8)",
-          color: "#fff",
-          width: 100, // width we want to expand to
-        }, 1000 ); //animatio  duration 1 sec
-
-        card.data("expanded", true);// Store card state
-   
-        // Auto-collapse after 3 seconds
-setTimeout(() => {
-        card.animate({
-          backgroundColor: "#fff",
-          color: "#000",
-          width: 240,
-        }, 1000);
-        card.data("expanded", false);
-      }, 3000);
-
-
-      } else {
-        //if card is Expanded, animate back to original
-        card.animate({
-          backgroundColor: "#fff",
-          color: "#000",
-          width: 240, // orginal width
-        }, 1000 );
-
-        //reset and store new card state
-        card.data("expanded", false);
-      }
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
         });
-    });
 
-      
+        //Resizable function for text area
+        $(function () {
+            $("#resizable").resizable();
+        });
+
+        $(function () {
+
+            $(".rolling").on("click", function () {
+                const card = $(this).closest(".card"); // Select the card of the clicked button
+                let isExpanded = card.data("expanded") || false; // check if card state = expanded - if not set to false
+
+                if (!isExpanded) {//If state not true (not expanded) apply this style on click {
+                    card.animate({
+                        backgroundColor: " rgba(0, 0, 0, 0.8)",
+                        color: "#fff",
+                        width: 100, // width we want to expand to
+                    }, 1000); //animatio  duration 1 sec
+
+                    card.data("expanded", true);// Store card state
+
+                    // Auto-collapse after 3 seconds
+                    setTimeout(() => {
+                        card.animate({
+                            backgroundColor: "#fff",
+                            color: "#000",
+                            width: 240,
+                        }, 1000);
+                        card.data("expanded", false);
+                    }, 3000);
 
 
-   
-  
- 
-  </script>
+                } else {
+                    //if card is Expanded, animate back to original
+                    card.animate({
+                        backgroundColor: "#fff",
+                        color: "#000",
+                        width: 240, // orginal width
+                    }, 1000);
+
+                    //reset and store new card state
+                    card.data("expanded", false);
+                }
+            });
+        });
+
+
+
+
+
+
+
+    </script>
 </head>
 
 <body>
@@ -78,16 +79,16 @@ setTimeout(() => {
         <nav class="navbar bg-dark">
             <!-- Navbar content -->
             <div class="container-fluid d-flex flex-wrap">
-<div class="d-flex flex-column flex-md-row col-12 col-md-4 align-items-center">
-    <!-- Brand container with flex -->
-    <a href="/index.htm" class="d-flex flex-column flex-md-row align-items-center text-decoration-none">
-        <img src="./assets/images/Logo.png" alt="Logo" class="img-fluid" style="max-height: 100px;">
-        <div class="tagline ms-md-3 text-center text-md-start">
-            <span class="RougeScript title">A marketer who</span>
-            <span class="Handjet title ms-1">codes</span>
-        </div>
-    </a>
-</div>
+                <div class="d-flex flex-column flex-md-row col-12 col-md-4 align-items-center">
+                    <!-- Brand container with flex -->
+                    <a href="/index.htm" class="d-flex flex-column flex-md-row align-items-center text-decoration-none">
+                        <img src="./assets/images/Logo.png" alt="Logo" class="img-fluid" style="max-height: 100px;">
+                        <div class="tagline ms-md-3 text-center text-md-start">
+                            <span class="RougeScript title">A marketer who</span>
+                            <span class="Handjet title ms-1">codes</span>
+                        </div>
+                    </a>
+                </div>
                 <!--Menu on large screen/hidden on phone-->
                 <div class="col-12 col-md-8 text-end menu-desktop">
                     <ul class="d-inline-flex px-3">
@@ -98,20 +99,21 @@ setTimeout(() => {
                         <li class="px-2 my-1 list-unstyled"><a href="#Contact"
                                 class="link-light text-decoration-none">Let's talk</a></li>
                     </ul>
-                
-            </div></div>
 
-             <!--Burger menu hiden on large screen - shown on phone-->
-             <div class="col-12 text-center mobile-menu">
-                    <ul class="d-inline-flex px-3">
-                        <li class="px-2 my-1 list-unstyled"><a href="#About"
-                                class="link-light text-decoration-none ">About me</a></li>
-                        <li class="px-2 my-1 list-unstyled"><a href="#Projects"
-                                class="link-light text-decoration-none">Projects</a></li>
-                        <li class="px-2 my-1 list-unstyled"><a href="#Contact"
-                                class="link-light text-decoration-none">Let's talk</a></li>
-                    </ul>
-                
+                </div>
+            </div>
+
+            <!--Burger menu hiden on large screen - shown on phone-->
+            <div class="col-12 text-center mobile-menu">
+                <ul class="d-inline-flex px-3">
+                    <li class="px-2 my-1 list-unstyled"><a href="#About" class="link-light text-decoration-none ">About
+                            me</a></li>
+                    <li class="px-2 my-1 list-unstyled"><a href="#Projects"
+                            class="link-light text-decoration-none">Projects</a></li>
+                    <li class="px-2 my-1 list-unstyled"><a href="#Contact" class="link-light text-decoration-none">Let's
+                            talk</a></li>
+                </ul>
+
             </div>
             </div>
         </nav>
@@ -122,8 +124,9 @@ setTimeout(() => {
             <div class="container-fluid row">
                 <h1 class="py-3">Where Business Meets Code</h1>
                 <div class="col-12 col-md-5 mb-3">
-                    
-                    <img src="./assets/images/Cover.jpg" class="img-fluid coverimg" alt="A women with codes in the background and over her face.">
+
+                    <img src="./assets/images/Cover.jpg" class="img-fluid coverimg"
+                        alt="A women with codes in the background and over her face.">
                 </div>
                 <div class="col-12 col-md-7 mt-3">
                     <p>My name is Ana&#239;s. I am a hands-on B2B marketer turned technical problem-solver.</p>
@@ -142,135 +145,153 @@ setTimeout(() => {
                     <p>I work with clients to create what fits their business goals and budget. </p>
 
                 </div>
-            </section>
-            <!--Portfolio Section-->
-            <section id="Projects" class="my-4 px-4">
-                <h1 class="text-center my-3">Built for business impact</h1>
-                <p class="text-center mt-3 mb-5">Each project combines strategic thinking with hands-on development to solve real
-                    business challenges.</p>
-                <div class="container-fluid ">
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 mx-auto">
-                        <div class="col d-flex">
-                    <div class="card px-0 mx-auto h-100 w-100">
-                        <div class="card-header">WF basketball - Visual mockups</div>
-                        <img src="./assets/images/Flames.png" class="card-img-top">
-                        <div class="card-body d-flex flex-column">
+        </section>
+        <!--Portfolio Section-->
+        <section id="Projects" class="my-4 px-4">
+            <h1 class="text-center my-3">Built for business impact</h1>
+            <p class="text-center mt-3 mb-5">Each project combines strategic thinking with hands-on development to solve
+                real
+                business challenges.</p>
+            <div class="container-fluid ">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 mx-auto">
+                    <div class="col d-flex">
+                        <div class="card px-0 mx-auto h-100 w-100">
+                            <div class="card-header">WF basketball - Visual mockups</div>
+                            <img src="./assets/images/Flames.png" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
 
-                            <p class="card-text">Created a homepage design for a local community basketball club to
-                                guide a volunteer through implementation in WordPress. Focused on clarity, usability,
-                                and local engagement.</p>
-                            <p class="card-text small">Figma</p>
-                            <button class="rolling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
-                            
+                                <p class="card-text">Created a homepage design for a local community basketball club to
+                                    guide a volunteer through implementation in WordPress. Focused on clarity,
+                                    usability,
+                                    and local engagement.</p>
+                                <p class="card-text small">Figma</p>
+                                <button class="rolling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
+
+                            </div>
                         </div>
                     </div>
-                    </div>
-<div class="col d-flex">
-                    <div class="card px-0 mx-auto h-100 w-100">
-                        <div class="card-header">Deepflow Massage - Website Redesign</div>
-                        <img src="./assets/images/DeepFlow.png" class="card-img-top"
-                            alt="A mockup of DeepFlow Massage website on a laptop">
-                        <div class="card-body d-flex flex-column">
+                    <div class="col d-flex">
+                        <div class="card px-0 mx-auto h-100 w-100">
+                            <div class="card-header">Deepflow Massage - Website Redesign</div>
+                            <img src="./assets/images/DeepFlow.png" class="card-img-top"
+                                alt="A mockup of DeepFlow Massage website on a laptop">
+                            <div class="card-body d-flex flex-column">
 
-                            <p class="card-text">Supported the business owner in structuring and writing content for a
-                                platform originally designed for portfolios. Ensured messaging, layout, and tone aligned
-                                with their services despite platform limitations.</p>
-                            <p class="card-text small">Fabrik.io</p>
+                                <p class="card-text">Supported the business owner in structuring and writing content for
+                                    a
+                                    platform originally designed for portfolios. Ensured messaging, layout, and tone
+                                    aligned
+                                    with their services despite platform limitations.</p>
+                                <p class="card-text small">Fabrik.io</p>
 
-                            <button class="rolling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
+                                <button class="rolling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
+                            </div>
                         </div>
-                    </div></div>
-<div class="col d-flex">
-                    <div class="card px-0 mx-auto h-100 w-100">
-                        <div class="card-header">Firefinch Marketing - Website Build</div>
-                        <img src="./assets/images/Firefinch.png" class="card-img-top"
-                            alt="A mockup of Firefinch Marketing website on Laptop and phone.">
-                        <div class="card-body d-flex flex-column">
-
-                            <p class="card-text">Designed and built a one-page marketing site in Webflow to establish a
-                                professional online presence for Firefinch Marketing. </p>
-                            <p class="card-text small">Webflow</p>
-                            <button class="rolling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
-                        </div></div>
-</div>
                     </div>
+                    <div class="col d-flex">
+                        <div class="card px-0 mx-auto h-100 w-100">
+                            <div class="card-header">Firefinch Marketing - Website Build</div>
+                            <img src="./assets/images/Firefinch.png" class="card-img-top"
+                                alt="A mockup of Firefinch Marketing website on Laptop and phone.">
+                            <div class="card-body d-flex flex-column">
+
+                                <p class="card-text">Designed and built a one-page marketing site in Webflow to
+                                    establish a
+                                    professional online presence for Firefinch Marketing. </p>
+                                <p class="card-text small">Webflow</p>
+                                <button class="rolling btn btn-primary mt-auto w-50 mx-auto">Expand</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
-                </section>
+        </section>
 
 
 
+
+        </div>
+        <!--Contact Section-->
+        <section id="Contact" class="my-5 px-4">
+            <div class="container-fluid row">
+                <div class="col-12 col-lg-5">
+                    <h1 class="my-2">Let's Build Something Together</h1>
+                    <p>Ready to turn your idea into something real?
+                        <br />
+                        Drop me a message.
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-7 my-2">
+
+                    <div class="col-9 mx-auto my-2">
+                        <form action="submit.php" method="post">
+
+                            <label for="name" class="block-label">Fullname</label><br />
+                            <input type="text" name="name" id="name" class="form-control form-control-sm"
+                                autocomplete="name">
+                            <br />
+                            <Label for="company" class="block-label">Company</Label><br />
+                            <input type="text" id="company" name="company" class="form-control form-control-sm"
+                                autocomplete="organization">
+                            <br />
+                            <label for="email" class="block-label email-label">Email</label><br />
+                            <input type="email" name="email" id="email" class="form-control form-control-sm"
+                                autocomplete="on">
+                            <br />
+                            <label for="tel" class="block-label tel-label">Tel</label><br />
+                            <input type="tel" name="tel" id="tel" class="form-control form-control-sm"
+                                autocomplete="tel">
+                            <br />
+
+
+                            <p><b>How can I help?</b></p>
+
+                            <input type="radio" id="webdesign" name="services" value="Website design/redesign"
+                                class="form-check-input">
+                            <label for="webdesign">Website Design</label><br />
+                            <input type="radio" id="website build" name="services" value="Website build"
+                                class="form-check-input">
+                            <label for="website build">Website Build</label><br />
+                            <input type="radio" id="marketing strategy" name="services" value="Marketing strategy"
+                                class="form-check-input">
+                            <label for="marketing strategy">Marketing Strategy</label><br />
+                            <br />
+                            <!-- Jquery date picker -->
+                            <p><b>Project Deadline</b></p>
+                            <input type="text" id="datepicker" placeholder="Pick a date" class="p-2">
+                            <br />
+                            <br />
+                            <!--Resizable function for text area -->
+                            <p><b>Provide a short description of your project.</b></p>
+                            <textarea id="resizable" name="description" class="form-control form-control-sm"
+                                autocomplete="off"></textarea>
+
+                            <br />
+                            <button type="submit" class="btn btn-primary">Request a chat</button>
+
+
+                        </form>
+                    </div>
+                </div>
 
             </div>
-            <!--Contact Section-->
-            <section id="Contact" class="my-5 px-4">
-                <div class="container-fluid row">
-                    <div class="col-12 col-lg-5">
-                        <h1 class="my-2">Let's Build Something Together</h1>
-                        <p>Ready to turn your idea into something real? 
-                            <br/>
-                            Drop me a message.</p>
-                    </div>
-                    
-                    <div class="col-12 col-lg-7 my-2">
-                     
-                    <div class="col-9 mx-auto my-2">    
-                    <form action="submit.php" method="post">
-
-                    <label for="name" class="block-label">Fullname</label><br />
-                    <input type="text" name="name" id="name" class="form-control form-control-sm" autocomplete="name">
-                    <br />
-                    <Label for="company" class="block-label">Company</Label><br />
-                    <input type="text" id="company" name="company" class="form-control form-control-sm" autocomplete="organization">
-                    <br />
-                    <label for="email" class="block-label email-label">Email</label><br />
-                    <input type="email" name="email" id="email" class="form-control form-control-sm" autocomplete="on">
-                    <br />
-                    <label for="tel" class="block-label tel-label">Tel</label><br />
-                    <input type="tel" name="tel" id="tel" class="form-control form-control-sm" autocomplete="tel">
-                    <br />
-
-
-                    <p><b>How can I help?</b></p>
-
-                    <input type="radio" id="webdesign" name="services" value="Website design/redesign" class="form-check-input" >
-                    <label for="webdesign">Website Design</label><br />
-                    <input type="radio" id="website build" name="services" value="Website build" class="form-check-input" >
-                    <label for="website build">Website Build</label><br />
-                    <input type="radio" id="marketing strategy" name="services" value="Marketing strategy" class="form-check-input" >
-                    <label for="marketing strategy">Marketing Strategy</label><br />
-<br />
-<!-- Jquery date picker -->
-                    <p><b>Project Deadline</b></p>
-                    <input type="text" id="datepicker" placeholder="Pick a date" class="p-2">
-                                        <br />
-                    <br />
-                    <!--Resizable function for text area -->
-                    <p><b>Provide a short description of your project.</b></p>
-                    <textarea id="resizable" name="description" class="form-control form-control-sm" autocomplete="off"></textarea>
-
-                    <br />
-                     <button type="submit" class="btn btn-primary">Request a chat</button>
-                    
-
-                </form></div>
-</div>
-
-                </div>
-            </section>
+        </section>
 
 
     </main>
     <footer class="mt-4 bg-dark py-2 text-white">
         <div class="row align-items-center mx-3">
-        <div class="col-6 align-middle">
-            <p class="small mb-1">©2025 Ana&#239;s B. All rights reserved.</p>
+            <div class="col-6 align-middle">
+                <p class="small mb-1">©2025 Ana&#239;s B. All rights reserved.</p>
+            </div>
+            <div class="col-6 text-end pr-4 small">Follow me on <a
+                    href="https://www.linkedin.com/in/anais-bresle-b2bmarketing/" target="_blank"><img
+                        src="./assets/images/LinkedIn.png" class="socials"></a> </div>
         </div>
-        <div class="col-6 text-end pr-4 small">Follow me on <a href="https://www.linkedin.com/in/anais-bresle-b2bmarketing/"
-                target="_blank"><img src="./assets/images/LinkedIn.png" class="socials"></a> </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
 
